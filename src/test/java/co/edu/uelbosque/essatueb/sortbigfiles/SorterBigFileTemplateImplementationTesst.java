@@ -87,7 +87,17 @@ public class SorterBigFileTemplateImplementationTesst {
         sbfti.setBufferReader(getBufferedReader());
         sbfti.breakFileInChunksAndSortIt(new EdadComparator());
         long totalArchivos=Files.list(out_files.toPath()).count();
-        Assert.assertEquals(totalArchivos, 4);
+        
+      
+        File salida = sbfti.mergeTempSortedFiles(new EdadComparator());
+        
+        //System.out.println("SAlida: " +salida.getAbsolutePath());
+        
+        
+        Assert.assertEquals(totalArchivos, 6);
     }
+    
+   
+     
    
 }

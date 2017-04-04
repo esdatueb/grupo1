@@ -5,14 +5,21 @@
 package co.edu.uelbosque.essatueb.sortbigfiles;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.Queue;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import sun.reflect.generics.tree.Tree;
 
 /**
  *
@@ -62,29 +69,92 @@ public class SorterBigFileTemplateImpl extends SorterBigFileTemplate{
          this.outPutDir.mkdirs();
          try{
          FileWriter fw=new FileWriter(this.outPutDir+"/Part"+fileNumber+".txt");
+         BufferedWriter bw = new BufferedWriter(fw);
          for (int i = 0; i < lines.length; i++) {
             String line = lines[i]+"\n";
-            fw.write(line);
+            bw.write(line);
+            bw.newLine();
         }
+         bw.close();
          fw.close();
          }catch(IOException ioe){
              ioe.printStackTrace();
         }
     }
-
+    //Unir Archivos
     @Override
     protected File mergeFiles(File file1, File file2) {
-        throw new UnsupportedOperationException("Not implemented yet");
+       File archivoSalida = new File(this.outPutDir+"/archivoSalida.txt");
+       FileWriter fw = null;
+       BufferedWriter bw = null;
+        try {
+            fw = new FileWriter(archivoSalida, true);
+            bw = new BufferedWriter(fw);
+        } catch (IOException ex) {
+            Logger.getLogger(SorterBigFileTemplateImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        try {
+            FileInputStream fis = new FileInputStream(file1);
+            BufferedReader br = new BufferedReader(new InputStreamReader(fis));
+            String linea;
+            while((linea = br.readLine()) != null){
+                System.out.println("Linea: "+linea);
+                bw.write(linea);
+                bw.newLine();
+            }
+            
+            FileInputStream fis2 = new FileInputStream(file2);
+            BufferedReader br2 = new BufferedReader(new InputStreamReader(fis2));
+          
+            while((linea = br2.readLine()) != null){
+                System.out.println("Linea: "+linea);
+                bw.write(linea);
+                bw.newLine();
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(SorterBigFileTemplateImpl.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(SorterBigFileTemplateImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            bw.close();
+            fw.close();
+            
+        } catch (IOException ex) {
+            Logger.getLogger(SorterBigFileTemplateImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        return archivoSalida;
     }
 
     @Override
     protected Queue<File> getFilesToOrder() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        Queue cola = new LinkedList();
+        String dir = System.getProperty("user.dir");
+        File out_files=new File(dir+"/out");
+        try {
+            long totalArchivos=Files.list(out_files.toPath()).count();
+            for (int i = 0; i < totalArchivos; i++) {
+               
+                File f = new File(dir+"/out"+"/Part"+i+".txt");
+               
+                cola.add(f);
+                
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(SorterBigFileTemplateImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return cola;
+        
     }
 
     BufferedReader br;
     void setBufferReader(BufferedReader br) {
        this.br=br;
     }
+    
+    
     
 }

@@ -78,6 +78,7 @@ public abstract class SorterBigFileTemplate {
 
     public File mergeTempSortedFiles(Comparator c){
           Queue<File> filesToOrder=getFilesToOrder();
+      
           while(filesToOrder.size()>1){
               File archivo1=filesToOrder.poll();
               File archivo2=filesToOrder.poll();
@@ -88,6 +89,8 @@ public abstract class SorterBigFileTemplate {
     }
 
     protected abstract File mergeFiles(File file1, File file2);
-
+   
+    
+    
     protected abstract Queue<File> getFilesToOrder();
 }

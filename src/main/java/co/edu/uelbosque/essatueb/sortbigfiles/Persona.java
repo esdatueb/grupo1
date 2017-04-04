@@ -101,7 +101,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return ""+this.edad; //To change body of generated methods, choose Tools | Templates.
+        return ""+this.edad+","+this.nombre; //To change body of generated methods, choose Tools | Templates.
     }
     
     
