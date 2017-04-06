@@ -36,6 +36,8 @@ public class EdadComparatorTest {
         EdadComparator ec=new EdadComparator();
         int resultado=ec.compare(p1,p2);
         assertTrue(resultado<0);
+        
+        
     }
     
     @Test

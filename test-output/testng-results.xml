@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="66" started-at="2017-04-06T01:28:49Z" finished-at="2017-04-06T01:28:49Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="66" started-at="2017-04-06T01:28:49Z" finished-at="2017-04-06T01:28:49Z">
+      <class name="co.edu.uelbosque.essatueb.sortbigfiles.EdadComparatorTest">
+        <test-method status="PASS" signature="laPruebaDebeOrdenar2PersonasIguales()[pri:0, instance:co.edu.uelbosque.essatueb.sortbigfiles.EdadComparatorTest@7b227d8d]" name="laPruebaDebeOrdenar2PersonasIguales" duration-ms="24" started-at="2017-04-05T20:28:49Z" finished-at="2017-04-05T20:28:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- laPruebaDebeOrdenar2PersonasIguales -->
+        <test-method status="PASS" signature="laPruebaDebeOrdenar2PersonasMayorMenor()[pri:0, instance:co.edu.uelbosque.essatueb.sortbigfiles.EdadComparatorTest@7b227d8d]" name="laPruebaDebeOrdenar2PersonasMayorMenor" duration-ms="1" started-at="2017-04-05T20:28:49Z" finished-at="2017-04-05T20:28:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- laPruebaDebeOrdenar2PersonasMayorMenor -->
+        <test-method status="PASS" signature="laPruebaDebeOrdenar2PersonasMenorMayor()[pri:0, instance:co.edu.uelbosque.essatueb.sortbigfiles.EdadComparatorTest@7b227d8d]" name="laPruebaDebeOrdenar2PersonasMenorMayor" duration-ms="1" started-at="2017-04-05T20:28:49Z" finished-at="2017-04-05T20:28:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- laPruebaDebeOrdenar2PersonasMenorMayor -->
+      </class> <!-- co.edu.uelbosque.essatueb.sortbigfiles.EdadComparatorTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
