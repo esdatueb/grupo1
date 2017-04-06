@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="66" started-at="2017-04-06T01:28:49Z" finished-at="2017-04-06T01:28:49Z">
+  <suite name="Default suite" duration-ms="252" started-at="2017-04-06T02:02:47Z" finished-at="2017-04-06T02:02:47Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="66" started-at="2017-04-06T01:28:49Z" finished-at="2017-04-06T01:28:49Z">
-      <class name="co.edu.uelbosque.essatueb.sortbigfiles.EdadComparatorTest">
-        <test-method status="PASS" signature="laPruebaDebeOrdenar2PersonasIguales()[pri:0, instance:co.edu.uelbosque.essatueb.sortbigfiles.EdadComparatorTest@7b227d8d]" name="laPruebaDebeOrdenar2PersonasIguales" duration-ms="24" started-at="2017-04-05T20:28:49Z" finished-at="2017-04-05T20:28:49Z">
+    <test name="Default test" duration-ms="252" started-at="2017-04-06T02:02:47Z" finished-at="2017-04-06T02:02:47Z">
+      <class name="co.edu.uelbosque.essatueb.sortbigfiles.SorterBigFileTemplateImplementationTesst">
+        <test-method status="PASS" signature="getFilesToOrder()[pri:0, instance:co.edu.uelbosque.essatueb.sortbigfiles.SorterBigFileTemplateImplementationTesst@7b227d8d]" name="getFilesToOrder" duration-ms="167" started-at="2017-04-05T21:02:47Z" finished-at="2017-04-05T21:02:47Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- laPruebaDebeOrdenar2PersonasIguales -->
-        <test-method status="PASS" signature="laPruebaDebeOrdenar2PersonasMayorMenor()[pri:0, instance:co.edu.uelbosque.essatueb.sortbigfiles.EdadComparatorTest@7b227d8d]" name="laPruebaDebeOrdenar2PersonasMayorMenor" duration-ms="1" started-at="2017-04-05T20:28:49Z" finished-at="2017-04-05T20:28:49Z">
+        </test-method> <!-- getFilesToOrder -->
+        <test-method status="PASS" signature="mergeFiles()[pri:0, instance:co.edu.uelbosque.essatueb.sortbigfiles.SorterBigFileTemplateImplementationTesst@7b227d8d]" name="mergeFiles" duration-ms="1" started-at="2017-04-05T21:02:47Z" finished-at="2017-04-05T21:02:47Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- laPruebaDebeOrdenar2PersonasMayorMenor -->
-        <test-method status="PASS" signature="laPruebaDebeOrdenar2PersonasMenorMayor()[pri:0, instance:co.edu.uelbosque.essatueb.sortbigfiles.EdadComparatorTest@7b227d8d]" name="laPruebaDebeOrdenar2PersonasMenorMayor" duration-ms="1" started-at="2017-04-05T20:28:49Z" finished-at="2017-04-05T20:28:49Z">
+        </test-method> <!-- mergeFiles -->
+        <test-method status="PASS" signature="particionarArchivos()[pri:0, instance:co.edu.uelbosque.essatueb.sortbigfiles.SorterBigFileTemplateImplementationTesst@7b227d8d]" name="particionarArchivos" duration-ms="14" started-at="2017-04-05T21:02:47Z" finished-at="2017-04-05T21:02:47Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- laPruebaDebeOrdenar2PersonasMenorMayor -->
-      </class> <!-- co.edu.uelbosque.essatueb.sortbigfiles.EdadComparatorTest -->
+        </test-method> <!-- particionarArchivos -->
+        <test-method status="PASS" signature="saveToNewFile()[pri:0, instance:co.edu.uelbosque.essatueb.sortbigfiles.SorterBigFileTemplateImplementationTesst@7b227d8d]" name="saveToNewFile" duration-ms="2" started-at="2017-04-05T21:02:47Z" finished-at="2017-04-05T21:02:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- saveToNewFile -->
+        <test-method status="PASS" signature="shouldHasMoreLinesToReadFromBuffer()[pri:0, instance:co.edu.uelbosque.essatueb.sortbigfiles.SorterBigFileTemplateImplementationTesst@7b227d8d]" name="shouldHasMoreLinesToReadFromBuffer" duration-ms="2" started-at="2017-04-05T21:02:47Z" finished-at="2017-04-05T21:02:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldHasMoreLinesToReadFromBuffer -->
+        <test-method status="PASS" signature="shouldReturnFirstTwoLines()[pri:0, instance:co.edu.uelbosque.essatueb.sortbigfiles.SorterBigFileTemplateImplementationTesst@7b227d8d]" name="shouldReturnFirstTwoLines" duration-ms="2" started-at="2017-04-05T21:02:47Z" finished-at="2017-04-05T21:02:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnFirstTwoLines -->
+      </class> <!-- co.edu.uelbosque.essatueb.sortbigfiles.SorterBigFileTemplateImplementationTesst -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

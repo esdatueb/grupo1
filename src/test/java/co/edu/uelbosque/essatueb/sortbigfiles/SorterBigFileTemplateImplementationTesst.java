@@ -12,6 +12,9 @@ import java.io.InputStreamReader;
 import java.io.StringBufferInputStream;
 import java.io.StringReader;
 import java.nio.file.Files;
+import java.util.LinkedList;
+import java.util.Queue;
+
 import org.testng.Assert;
 import static org.testng.Assert.*;
 import org.testng.annotations.Test;
@@ -88,16 +91,25 @@ public class SorterBigFileTemplateImplementationTesst {
         sbfti.breakFileInChunksAndSortIt(new EdadComparator());
         long totalArchivos=Files.list(out_files.toPath()).count();
         
-      
         File salida = sbfti.mergeTempSortedFiles(new EdadComparator());
         
         //System.out.println("SAlida: " +salida.getAbsolutePath());
         
         
-        Assert.assertEquals(totalArchivos, 6);
+        Assert.assertEquals(totalArchivos, 4);
     }
     
-   
-     
+    @Test
+    public void mergeFiles(){
+    	//File archivo1 = new File
+    };
+    
+    @Test
+    public void getFilesToOrder(){
+    	SorterBigFileTemplateImpl sbfti = new SorterBigFileTemplateImpl();
+    	int contarQueue = sbfti.getFilesToOrder().size();
+    	Assert.assertEquals(contarQueue, 4);
+    	
+    };
    
 }
